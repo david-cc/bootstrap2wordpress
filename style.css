@@ -18,7 +18,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
-*/
+ */
 
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
@@ -28,19 +28,19 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Elements
 # Forms
 # Navigation
-	## Links
-	## Menus
+## Links
+## Menus
 # Accessibility
 # Alignments
 # Clearings
 # Widgets
 # Content
-	## Posts and pages
-	## Comments
+## Posts and pages
+## Comments
 # Infinite scroll
 # Media
-	## Captions
-	## Galleries
+## Captions
+## Galleries
 # Custom
 --------------------------------------------------------------*/
 
@@ -75,38 +75,38 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
-	display: block;
+  display: block;
 }
 
 @media screen and (min-width: 37.5em) {
-	.menu-toggle {
-		display: none;
-	}
-	.main-navigation ul {
-		display: block;
-	}
+  .menu-toggle {
+    display: none;
+  }
+  .main-navigation ul {
+    display: block;
+  }
 }
 
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {
-	margin: 0 0 1.5em;
-	overflow: hidden;
+  margin: 0 0 1.5em;
+  overflow: hidden;
 }
 
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
-	float: left;
-	width: 50%;
+  float: left;
+  width: 50%;
 }
 
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
 .post-navigation .nav-next {
-	float: right;
-	text-align: right;
-	width: 50%;
+  float: right;
+  text-align: right;
+  width: 50%;
 }
 
 /*--------------------------------------------------------------
@@ -114,58 +114,58 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 --------------------------------------------------------------*/
 /* Text meant only for screen readers. */
 .screen-reader-text {
-	clip: rect(1px, 1px, 1px, 1px);
-	position: absolute !important;
-	height: 1px;
-	width: 1px;
-	overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
 }
 
 .screen-reader-text:focus {
-	background-color: #f1f1f1;
-	border-radius: 3px;
-	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-	clip: auto !important;
-	color: #21759b;
-	display: block;
-	font-size: 14px;
-	font-size: 0.875rem;
-	font-weight: bold;
-	height: auto;
-	left: 5px;
-	line-height: normal;
-	padding: 15px 23px 14px;
-	text-decoration: none;
-	top: 5px;
-	width: auto;
-	z-index: 100000; /* Above WP toolbar. */
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000; /* Above WP toolbar. */
 }
 
 /* Do not show the outline on the skip link target. */
 #content[tabindex="-1"]:focus {
-	outline: 0;
+  outline: 0;
 }
 
 /*--------------------------------------------------------------
 # Alignments
 --------------------------------------------------------------*/
 .alignleft {
-	display: inline;
-	float: left;
-	margin-right: 1.5em;
+  display: inline;
+  float: left;
+  margin-right: 1.5em;
 }
 
 .alignright {
-	display: inline;
-	float: right;
-	margin-left: 1.5em;
+  display: inline;
+  float: right;
+  margin-left: 1.5em;
 }
 
 .aligncenter {
-	clear: both;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*--------------------------------------------------------------
@@ -183,9 +183,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 .site-content:after,
 .site-footer:before,
 .site-footer:after {
-	content: "";
-	display: table;
-	table-layout: fixed;
+  content: "";
+  display: table;
+  table-layout: fixed;
 }
 
 .clear:after,
@@ -194,19 +194,19 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 .site-header:after,
 .site-content:after,
 .site-footer:after {
-	clear: both;
+  clear: both;
 }
 
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
 .widget {
-	margin: 0 0 1.5em;
+  margin: 0 0 1.5em;
 }
 
 /* Make sure select elements fit in widgets. */
 .widget select {
-	max-width: 100%;
+  max-width: 100%;
 }
 
 /*--------------------------------------------------------------
@@ -216,43 +216,43 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 ## Posts and pages
 --------------------------------------------------------------*/
 .sticky {
-	display: block;
+  display: block;
 }
 
 .hentry {
-	margin: 0 0 1.5em;
+  margin: 0 0 1.5em;
 }
 
 .byline,
 .updated:not(.published) {
-	display: none;
+  display: none;
 }
 
 .single .byline,
 .group-blog .byline {
-	display: inline;
+  display: inline;
 }
 
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+  margin: 1.5em 0 0;
 }
 
 .page-links {
-	clear: both;
-	margin: 0 0 1.5em;
+  clear: both;
+  margin: 0 0 1.5em;
 }
 
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
 .comment-content a {
-	word-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .bypostauthor {
-	display: block;
+  display: block;
 }
 
 /*--------------------------------------------------------------
@@ -261,12 +261,12 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
 .infinite-scroll .posts-navigation, /* Older / Newer Posts Navigation (always hidden) */
 .infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
-	display: none;
+  display: none;
 }
 
 /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
 .infinity-end.neverending .site-footer {
-	display: block;
+  display: block;
 }
 
 /*--------------------------------------------------------------
@@ -275,89 +275,89 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 .page-content .wp-smiley,
 .entry-content .wp-smiley,
 .comment-content .wp-smiley {
-	border: none;
-	margin-bottom: 0;
-	margin-top: 0;
-	padding: 0;
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
 }
 
 /* Make sure embeds and iframes fit their containers. */
 embed,
 iframe,
 object {
-	max-width: 100%;
+  max-width: 100%;
 }
 
 /*--------------------------------------------------------------
 ## Captions
 --------------------------------------------------------------*/
 .wp-caption {
-	margin-bottom: 1.5em;
-	max-width: 100%;
+  margin-bottom: 1.5em;
+  max-width: 100%;
 }
 
 .wp-caption img[class*="wp-image-"] {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .wp-caption .wp-caption-text {
-	margin: 0.8075em 0;
+  margin: 0.8075em 0;
 }
 
 .wp-caption-text {
-	text-align: center;
+  text-align: center;
 }
 
 /*--------------------------------------------------------------
 ## Galleries
 --------------------------------------------------------------*/
 .gallery {
-	margin-bottom: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 .gallery-item {
-	display: inline-block;
-	text-align: center;
-	vertical-align: top;
-	width: 100%;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  width: 100%;
 }
 
 .gallery-columns-2 .gallery-item {
-	max-width: 50%;
+  max-width: 50%;
 }
 
 .gallery-columns-3 .gallery-item {
-	max-width: 33.33%;
+  max-width: 33.33%;
 }
 
 .gallery-columns-4 .gallery-item {
-	max-width: 25%;
+  max-width: 25%;
 }
 
 .gallery-columns-5 .gallery-item {
-	max-width: 20%;
+  max-width: 20%;
 }
 
 .gallery-columns-6 .gallery-item {
-	max-width: 16.66%;
+  max-width: 16.66%;
 }
 
 .gallery-columns-7 .gallery-item {
-	max-width: 14.28%;
+  max-width: 14.28%;
 }
 
 .gallery-columns-8 .gallery-item {
-	max-width: 12.5%;
+  max-width: 12.5%;
 }
 
 .gallery-columns-9 .gallery-item {
-	max-width: 11.11%;
+  max-width: 11.11%;
 }
 
 .gallery-caption {
-	display: block;
+  display: block;
 }
 
 /*--------------------------------------------------------------
@@ -366,7 +366,7 @@ object {
 
 /* GENERAL */
 .logged-in .navbar-fixed-top {
-	top: 32px;
+  top: 32px;
 }
 
 blockquote {
@@ -965,9 +965,9 @@ button[type="submit"]:hover {
 
 /** Fix the top margin when logged in */
 @media screen and (max-width: 782px) {
-	.logged-in .navbar-fixed-top {
-		top: 46px;
-	}
+  .logged-in .navbar-fixed-top {
+    top: 46px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -988,9 +988,9 @@ button[type="submit"]:hover {
 
 /* fix position of admin toolbar */
 @media screen and (max-width: 600px) {
-	#wpadminbar {
-	  position: fixed;
-	}
+  #wpadminbar {
+    position: fixed;
+  }
 }
 
 /* iphone 5 */

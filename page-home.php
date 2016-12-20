@@ -45,7 +45,7 @@ get_header(); ?>
       <div class="container clearfix">
         <div class="row">
           <div class="col-md-5">
-            <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/logo-badge.png" 
+            <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/logo-badge.png"
               alt="Bootstrap to Wordpress" class="logo">
           </div>
           <div class="col-md-7 jumbotron">
@@ -65,8 +65,8 @@ get_header(); ?>
                 <span><?php echo $final_price; ?></span>
               </div>
 
-              <p><a href="<?php echo $course_url; ?>" 
-                class="btn btn-lg btn-danger" role="button" 
+              <p><a href="<?php echo $course_url; ?>"
+                class="btn btn-lg btn-danger" role="button"
                 target="_blank"><?php echo $button_text; ?></a></p>
             </div>
           </div>
@@ -83,7 +83,7 @@ get_header(); ?>
         <p class="lead"><?php echo $optin_text; ?></p>
         </div><!-- col8 -->
         <div class="col-sm-4">
-          <button class="btn btn-success btn-lg btn-block" data-toggle="modal" 
+          <button class="btn btn-success btn-lg btn-block" data-toggle="modal"
             data-target="#myModal"><?php echo $optin_button_text; ?></button>
         </div><!-- col4 -->
       </div>
@@ -97,7 +97,7 @@ get_header(); ?>
 
         <!-- If user uploaded an image -->
         <?php if (!empty($income_feature_image)) : ?>
-          <img src="<?php echo $income_feature_image['url']; ?>" 
+          <img src="<?php echo $income_feature_image['url']; ?>"
             alt="<?php echo $income_feature_image['alt']; ?>">
         <?php endif; ?>
 
@@ -125,7 +125,7 @@ get_header(); ?>
       <div class="section-header">
 
         <?php if (!empty($who_feature_image)) : ?>
-          <img src="<?php echo $who_feature_image['url']; ?>" 
+          <img src="<?php echo $who_feature_image['url']; ?>"
             alt="<?php echo $who_feature_image['alt']; ?>">
         <?php endif; ?>
 
@@ -145,12 +145,12 @@ get_header(); ?>
     <div class="container">
       <div class="section-header">
         <?php if(!empty($features_section_image)): ?>
-          <img src="<?php echo $features_section_image['url']; ?>" 
+          <img src="<?php echo $features_section_image['url']; ?>"
             alt="<?php echo $features_section_image['alt']; ?>">
         <?php endif; ?>
 
         <h2><?php echo $features_section_title; ?></h2>
-        
+
         <?php if(!empty($features_section_body)): ?>
           <p><?php echo $features_section_body; ?></p>
         <?php endif; ?>
@@ -179,10 +179,10 @@ get_header(); ?>
 
       <div class="row">
         <?php $loop = new WP_Query(array('post_type' => 'project_feature', 'orderby' => 'post_id', 'order' => 'ASC')); ?>
-        
+
         <?php while ($loop->have_posts()) : $loop->the_post(); ?>
           <div class="col-sm-4">
-            <?php 
+            <?php
               if (has_post_thumbnail()) {
                 the_post_thumbnail();
               }
@@ -206,7 +206,7 @@ get_header(); ?>
             <p><?php echo $video_section_body; ?></p>
           <?php endif; ?>
 
-          <iframe width="100%" height="415" src="<?php echo $video_section_video_url; ?>" 
+          <iframe width="100%" height="415" src="<?php echo $video_section_video_url; ?>"
             frameborder="0" allowfullscreen></iframe>
         </div>
       </div>
