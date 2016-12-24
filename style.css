@@ -654,7 +654,7 @@ section h3 {
   font-size: 24px;
 }
 
-.post-image {
+.post-image img {
   height: auto;
 }
 
@@ -757,6 +757,21 @@ section h3 {
   margin: 40px 0 0;
   padding: 20px 0 0;
   border-top: solid 1px #eee;
+}
+
+/* specific comment styles */
+#comments footer {
+	background:none;
+	color: inherit;
+	text-align: left;
+}
+
+#comments footer a {
+	color: inherit;
+}
+
+#comments .comment-metadata {
+	margin: 10px 0 0;
 }
 
 /* RESSOURCES */
