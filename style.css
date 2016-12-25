@@ -398,6 +398,10 @@ h1 {
   font-size: 3em;
 }
 
+h1 small {
+  color: #ccc;
+}
+
 h1, h2 {
   margin: 0 0 40px;
 }
@@ -772,6 +776,11 @@ section h3 {
 
 #comments .comment-metadata {
 	margin: 10px 0 0;
+}
+
+/* ARCHIVES */
+.archive-description p {
+ margin-top: 10px;
 }
 
 /* RESSOURCES */
