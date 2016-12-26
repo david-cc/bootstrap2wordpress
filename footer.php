@@ -30,23 +30,28 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-3">
-				<p><a href="#"><img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/logo.png" alt="Bootstrap to WP" /></a></p>
+				<p>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+						<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/logo.png" 
+							alt="Bootstrap to WP" />
+					</a>
+				</p>
 			</div>
 
 			<div class="col-sm-6">
-				<nav>
-					<ul class="list-unstyled list-inline">
-						<li><a href="">Home</a></li>
-						<li><a href="">Blog</a></li>
-						<li><a href="">Resources</a></li>
-						<li><a href="">Contact</a></li>
-						<li class="signup-link"><a href="">Sign up now</a></li>
-					</ul>
-				</nav>
+				<?php
+					wp_nav_menu(array(
+						'theme_location'	=> 'footer',
+						'container'				=> 'nav',
+						'menu_class'			=> 'list-unstyled list-inline'
+					));
+				?>
 			</div>
 
 			<div class="col-sm-3">
-				<p class="pull-right">&copy; 2014 Brad Hussey</p>
+			<p class="pull-right">
+				<?php bloginfo('name'); ?> &copy; <?php echo date('Y'); ?> <?php the_author_link(); ?>
+			</p>
 			</div>
 		</div>
 	</div>
@@ -57,20 +62,31 @@
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-				<h4 class="modal-title" id="myModalLabel"><i class="fa fa-envelope"> Subscribe to our mailing list</i> </h4>
+				<button type="button" class="close" data-dismiss="modal">
+					<span aria-hidden="true">&times;</span>
+					<span class="sr-only">Close</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">
+					<i class="fa fa-envelope"> Subscribe to our mailing list</i> 
+				</h4>
 			</div>
 			<div class="modal-body">
-				<p>Simply enter your name and email! As a thank you for joining us, we're going to give you one of our best-selling courses, <em>for free!</em></p>
+				<p>
+					Simply enter your name and email! As a thank you for joining us,&nbps;
+					we're going to give you one of our best-selling courses,&nbsp;
+					<em>for free!</em>
+				</p>
 				<form class="form-inline" role="form">
 					<div class="form-group">
 						<label for="subscribe-name" class="sr-only">Your first name</label>
-						<input type="text" class="form-control" id="subscribe-name" placeholder="Your first name">
+						<input type="text" class="form-control" id="subscribe-name"
+							placeholder="Your first name">
 					</div>
 
 					<div class="form-group">
 						<label for="subscribe-email" class="sr-only">Your email</label>
-						<input type="text" class="form-control" id="subscribe-email" placeholder="Your email">
+						<input type="text" class="form-control" id="subscribe-email"
+							placeholder="Your email">
 					</div>
 
 					<input type="submit" class="btn btn-danger" value="Subscribe!">
@@ -78,7 +94,12 @@
 
 				<hr>
 
-				<p><small>By providing your email you consent to receiving occasional promotional emails &amp; newsletters. <br>No Spam. Just good stuff. We respect your privacy &amp; you may unsubscribe at any time.</small></p>
+				<p>
+					<small>By providing your email you consent to receiving occasional&nbps;
+					promotional emails &amp; newsletters.
+					<br>No Spam. Just good stuff. We respect your privacy &amp;&nbsp;
+					you may unsubscribe at any time.</small>
+				</p>
 			</div>
 		</div>
 	</div>
