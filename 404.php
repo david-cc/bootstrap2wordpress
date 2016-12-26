@@ -8,57 +8,92 @@
  */
 
 get_header(); ?>
+<section class="feature-image feature-image-default-alt"
+  data-type="background"
+  data-speed="2">
+  <h1 class="page-title">Bummer! That page can't be found.</h1>
+</section>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<div class="container">
+  <div id="primary" class="row">
+    <main id="content" class="col-sm-8">
+      <div class="error-404 not-found">
+        <div class="page-content">
+          <h2>Don't fret! Let's get me back on track.</h2>
 
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'bootstrap2wordpress' ); ?></h1>
-				</header><!-- .page-header -->
+          <!-- Resources -->
+          <h3>Resources</h3>
+          <p>Perhaps you were looking for a specific resources? </p>
+          
+          <div class="resource-row clearfix">
 
-				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'bootstrap2wordpress' ); ?></p>
+            <?php $loop = new WP_Query(
+              array(
+                'post_type' => 'resource',
+                'orderby' => 'post_id',
+                'order' => 'ASC'
+              ));
+            ?>
 
-					<?php
-						get_search_form();
+            <?php while ($loop->have_posts()) : $loop->the_post(); ?>
+            <div class="resource">
+              <?php
+                if (has_post_thumbnail()) {
+                  the_post_thumbnail(array(342, 200));
+                }
+              ?>
 
-						the_widget( 'WP_Widget_Recent_Posts' );
+              <h3>
+                <a href="<?php echo get_field('resource_url');?>">
+                  <?php the_title(); ?>
+                </a>
+              </h3>
 
-						// Only show the widget if site has multiple categories.
-						if ( bootstrap2wordpress_categorized_blog() ) :
-					?>
+              <?php the_excerpt(); ?>
 
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'bootstrap2wordpress' ); ?></h2>
-						<ul>
-						<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
-						?>
-						</ul>
-					</div><!-- .widget -->
+              <a href="<?php echo get_field('resource_url'); ?>" class="btn btn-success">
+                <?php echo get_field('resource_btn_text'); ?>
+              </a>
+            </div>
+            <?php endwhile; wp_reset_postdata(); ?>
+          </div>
 
-					<?php
-						endif;
+          <!-- Categories -->
+          <h3>Categories</h3>
+          <p>...or maybe a popular category?</p>
 
-						/* translators: %1$s: smiley */
-						$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'bootstrap2wordpress' ), convert_smilies( ':)' ) ) . '</p>';
-						the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
+          <div class="widget widget_categories">
+            <h4 class="widget-title">Most Used Categories</h4>
 
-						the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
+            <ul>
+              <?php 
+                wp_list_categories(array(
+                  'orderby' => 'count',
+                  'order' => 'DESC',
+                  'show_count' => 1,
+                  'title_li' => '',
+                  'number' => 10
+                ));
+              ?>
+            </ul>
+          </div>
 
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
+          <!-- Archives -->
+          <h3>Archives</h3>
+          <p>You can always sort through our archives...</p>
+          <?php the_widget('WP_Widget_Archives', 'title=Our archives', 'before_title=<h4 class="widget-title">&ater_title=</h4>'); ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+          <p>...or, just head back to the <a href="<?php echo esc_url( home_url('/')); ?>">home page</a>.</p>
+        </div>
+      </div>
+    </main>
+
+    <!-- Sidebar -->
+    <aside class="col-sm-4">
+      <?php get_sidebar(); ?>
+    </aside>
+  </div>
+</div>
 
 <?php
 get_footer();

@@ -22,4 +22,3 @@ $video_section_video_url = get_field('video_section_video_url');
 		</div>
 	</div>
 </section>
-
